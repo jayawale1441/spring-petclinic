@@ -17,7 +17,7 @@ services:
     volumes:
       - ./prometheus/:/etc/prometheus/
     command:
-      - '--config.file=/etc/prometheus/prometheus.yaml'
+      - '--config.file=/home/ubuntu/spring-petclinic/prometheus.yaml'
     ports:
       - "9090:9090"
     restart: always
