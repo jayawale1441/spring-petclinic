@@ -6,13 +6,10 @@ scrape_configs:
   - job_name: 'prometheus'
     scrape_interval: 5s
     static_configs:
-      - targets: ['localhost:9090']
+      - targets: ['34.219.97.169:9090']
       
-scrape_configs:
-  - job_name: 'Spring Boot Application input'
+  - job_name: 'PetClinic'
     metrics_path: '/actuator/prometheus'
-    scrape_interval: 3s
+    scrape_interval: 5s
     static_configs:
-      - targets: ['localhost:8080']
-        labels:
-          application: 'My PetClinic Application'
+      - targets: ['34.219.97.169:8080']
